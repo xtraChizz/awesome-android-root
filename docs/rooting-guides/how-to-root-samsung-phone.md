@@ -84,7 +84,7 @@ Root Samsung Galaxy devices while navigating Knox security, Odin flashing, and O
 ## Quick Navigation
 
 - [Samsung Challenges](#samsung-rooting-challenges)
-- [Supported Devices](#supported-devices)
+- [Device Compatibility](#device-compatibility)
 - [Prerequisites](#prerequisites)
 - [Bootloader Unlock](#unlock-bootloader)
 - [Root Installation](#root-installation)
@@ -96,18 +96,17 @@ Root Samsung Galaxy devices while navigating Knox security, Odin flashing, and O
 - [Magisk Guide](./magisk-guide.md) - Complete Magisk documentation
 
 ---
-## Samsung Rooting Challenges
-### Critical Warnings
+### Samsung Rooting Challenges
 
-::: danger 🚨 One UI 8 Bootloader Lock
-**One UI 8 (Android 16) eliminates bootloader unlocking support on Samsung Galaxy devices.**
+::: danger BOOTLOADER LOCK ON RECENT DEVICES
+**Recent One UI versions (Android 16+) have eliminated bootloader unlocking support on newer Samsung Galaxy devices.**
 
-- **OEM Unlocking toggle removed** from Developer Options; unlock logic stripped from firmware (`androidboot.other.locked=1`)
-- **Affected globally**: S25 series, Z Fold 7, Z Flip 7, and any device updated to One UI 8
-- **Blocks rooting, custom ROMs, and custom kernels** entirely through official methods
-- **Applies to all regions**: International and US devices (both previously unlockable and restricted models)
+- **OEM Unlocking toggle removed** from Developer Options; unlock logic stripped from firmware
+- **Affects newer flagship devices** (S25 series and later) and any device updated to One UI 8+
+- **Blocks rooting, custom ROMs, and custom kernels** through official methods
+- **Applies globally** - both previously unlockable and restricted models
 
-**⚠️ Do NOT update to One UI 8 if you plan to root or unlock your bootloader** until verified unlock methods emerge.
+**Do NOT update to the latest One UI if you plan to root** until verified unlock methods emerge.
 :::
 
 
@@ -124,34 +123,26 @@ Root Samsung Galaxy devices while navigating Knox security, Odin flashing, and O
 
 ---
 
-## Supported Devices
+## Device Compatibility
 
-<details><summary>Click to expand supported Samsung devices</summary>
+Samsung rooting is complex and model-dependent. Rooting is primarily possible on **international Exynos models** and **some Snapdragon models with unlockable bootloaders**.
 
-**Galaxy S Series (Flagship):**
-- **Galaxy S25/S25+/S25 Ultra** – One UI 8 (Android 16) blocks bootloader unlock globally
-- **Galaxy S24/S24+/S24 Ultra** – Snapdragon only (Exynos not yet supported by Magisk)  
-- **Galaxy S23/S23+/S23 Ultra** – Global, Canadian, and unlocked models supported
-- **Galaxy S22/S22+/S22 Ultra** – All regions except carrier-locked US models
-- **Galaxy S21/S21+/S21 Ultra** – Excellent support across all variants
-- **Older S series (S20 and prior)** – Full root and custom ROM support
+### Incompatible / Restricted Devices
 
-**Galaxy A Series (Mid-range):**
-- **Galaxy A55/A54/A53** – A55 has full Magisk support
-- **Galaxy A35/A34/A33** – A35 supported; older models may require older Magisk
-- **Galaxy A25/A24/A23** – A25 works; A23 has limited recovery support
-- **Older A series** – Check XDA forums for model-specific status
+::: danger CANNOT BE ROOTED
+- **US carrier models** (Verizon, AT&T, T-Mobile branded) - bootloader permanently locked
+- **One UI 8+ (Android 16+) devices** - OEM Unlocking toggle removed globally; bootloader unlock logic stripped from firmware. Affects all S25 series, Z Fold 7, Z Flip 7, and any device updated to One UI 8
+- **Most US/Canadian Snapdragon variants** - no OEM unlock available
+:::
 
-**Galaxy Z Series (Fold/Flip):**
-- **Z Fold 5/6, Z Flip 5/6** – Supported with Magisk and TWRP alternatives
-- **Z Fold 4 and older** – Stable root via AP patching
+::: warning KNOX CONSEQUENCES (Permanent)
+- Knox EFUSE physically burned - **cannot be reversed**
+- Samsung Pay/Wallet, Secure Folder, Samsung Pass permanently disabled
+- Warranty permanently void
+- Some banking apps may refuse to run even with root hiding
+:::
 
-**Galaxy Note Series:**
-- **Galaxy Note 20/Note 20 Ultra** – Final Note generation, still actively used
-- **Galaxy Note 10/10+** – Legacy support, excellent TWRP availability
-- **Older Note devices** – Strong custom ROM community
-
-</details>
+**Before attempting:** Check your model's unlockability on [XDA Forums](https://forum.xda-developers.com/) for your specific variant.
 
 ---
 
